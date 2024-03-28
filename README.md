@@ -9,7 +9,7 @@ This repository contains all the necessary code and resources for deploying our 
 
 Feel free to explore the repository and learn more about our innovative approach to enhancing equipment reliability and minimizing downtime in industrial environments.
 
-###The following readme file explains the folders in the GF_Usecase
+### The following readme file explains the folders in the GF_Usecase
 
 1) backend_fastapi: It contains all the files used to build the backend docker image.
 2) frontend_streamlit-app: It contains all the files used to build the frontend docker image.
