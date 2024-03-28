@@ -1,0 +1,34 @@
+version: '3'
+services:
+  fastapi:
+    image: detection
+    ports:
+      - "80:80"
+    networks:
+      - my_network
+    volumes:
+      - my_data:/GF_Usecase/backend_fastapi/app/faulty_data
+      - my_data1:/GF_Usecase/backend_fastapi/app/all_data
+    build: 
+      context: backend_fastapi
+
+
+  streamlit:
+    image: frontend
+    ports:
+      - "8051:8051"
+    networks:
+      - my_network
+    volumes:
+      - my_data:/GF_Usecase/backend_fastapi/app/faulty_data
+      - my_data1:/GF_Usecase/backend_fastapi/app/all_data
+    build: 
+      context: frontend_streamlit
+
+
+networks:
+  my_network:
+
+volumes:
+  my_data:
+  my_data1:
